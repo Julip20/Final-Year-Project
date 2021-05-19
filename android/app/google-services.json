@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "710555256566",
+    "project_id": "my-app-c076b",
+    "storage_bucket": "my-app-c076b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710555256566:android:bed8894657a67b7d76ced7",
+        "android_client_info": {
+          "package_name": "com.vplPremier.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710555256566-iqij7qvm48b5oc5jdc94ph4o53rgl4ji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP8-Le9D7E_wipMIFzcJzgJCDbfX7szlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710555256566-iqij7qvm48b5oc5jdc94ph4o53rgl4ji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

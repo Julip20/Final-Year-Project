@@ -4,9 +4,8 @@ import 'package:my_app/screens/wrapper.dart';
 import 'package:my_app/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:my_app/screens/players_screen.dart';
-import 'package:my_app/screens/teams_screen.dart';
-
+import 'package:provider/provider.dart';
+import 'package:my_app/providers/teams.dart';
 
 void main() async 
 {
@@ -17,6 +16,7 @@ runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  static final String title = 'Premier League';
 
    
                                                                                                                                                                                                 
@@ -25,12 +25,19 @@ class MyApp extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
-     
-    return StreamProvider<User1>.value(
-         initialData: null,
-         value: AuthService().user,
-         child: MaterialApp(
+     return MultiProvider(
+       providers:[StreamProvider<User1>.value(
+       initialData: null,
+       value: AuthService().user,
+       ),
+       ChangeNotifierProvider<TeamsProvider>(create: (context)=>TeamsProvider(),
+       ),
+       ],
+       child: MaterialApp(
+          title: title,
            theme: ThemeData(
+            
+
              primarySwatch: Colors.grey,
              accentColor: Colors.deepOrange,
              fontFamily: 'lato',
@@ -38,12 +45,9 @@ class MyApp extends StatelessWidget {
          home: Wrapper(),
 
 
-         
-      
-      ),
-          
-       
+       ),
 
-    );
+
+     );
   }
 }
